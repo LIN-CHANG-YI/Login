@@ -1,0 +1,23 @@
+<div class="container">
+  <h1 class="text-center" style="font-family: fantasy;">Account Login</h2>
+    <div class="row">
+      <form action="/login" method="POST" class="mx-auto border p-2">
+        <div class="form-group">
+          <label for="exampleInputEmail1" style="font-family: OCR A Std, monospace">Email address</label>
+          <input type="email" name="email" value="{{email}}" class="form-control" id="exampleInputEmail1"
+            aria-describedby="emailHelp" placeholder="email...">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1" style="font-family: OCR A Std, monospace">Password</label>
+          <input type="password" name="password" value="{{password}}" class="form-control" id="exampleInputPassword1"
+            placeholder="password...">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        {{#if alert}}
+        <div class="alert alert-danger mt-2" role="alert">
+          {{alert}}
+        </div>
+        {{/if}}
+      </form>
+    </div>
+</div>
